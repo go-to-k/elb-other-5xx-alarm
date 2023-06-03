@@ -2,7 +2,7 @@
   "name": "elb-other-5xx-alarm",
   "repository": {
     "type": "git",
-    "url": "https://github.com/24818752+go-to-k/elb-other-5xx-alarm.git"
+    "url": "https://github.com/go-to-k/elb-other-5xx-alarm.git"
   },
   "scripts": {
     "build": "npx projen build",
@@ -38,7 +38,7 @@
     "@types/node": "^16",
     "@typescript-eslint/eslint-plugin": "^5",
     "@typescript-eslint/parser": "^5",
-    "aws-cdk-lib": "2.1.0",
+    "aws-cdk-lib": "2.82.0",
     "constructs": "10.0.5",
     "eslint": "^8",
     "eslint-import-resolver-node": "^0.3.7",
@@ -58,14 +58,18 @@
     "typescript": "^5.1.3"
   },
   "peerDependencies": {
-    "aws-cdk-lib": "^2.1.0",
+    "aws-cdk-lib": "^2.82.0",
     "constructs": "^10.0.5"
   },
   "keywords": [
-    "cdk"
+    "aws",
+    "aws-cdk",
+    "cdk",
+    "cloudwatch",
+    "elb"
   ],
   "main": "lib/index.js",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "version": "0.0.0",
   "jest": {
     "testMatch": [
