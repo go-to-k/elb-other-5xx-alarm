@@ -2,7 +2,7 @@
 
 ## What is
 
-This construct creates an alarm for Elastic Load Balancing (as Application Load Balancer) that fires at **HTTPCode_ELB_5XX_Count excluding 500, 502, 503, and 504** (such as 501, 505, 561).
+AWS CDK construct library for a CloudWatch Alarm for Elastic Load Balancing that fires on **HTTPCode_ELB_5XX_Count excluding 500, 502, 503, and 504** (e.g. 501, 505, 561).
 
 Metrics for concrete status codes such as 500 are provided (e.g. HTTPCode_ELB_500_Count). Therefore, it is useful to distinguish detection from them.
 
