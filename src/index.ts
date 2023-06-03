@@ -69,6 +69,9 @@ export interface ELBOther5XXAlarmProps {
 }
 
 export class ELBOther5XXAlarm extends Construct {
+  /**
+   * The composite alarm resource for HTTPCode_ELB_5XX_Count excluding 500, 502, 503, and 504.
+   */
   public readonly elbOther5XXAlarm: CompositeAlarm;
 
   constructor(scope: Construct, id: string, props: ELBOther5XXAlarmProps) {
