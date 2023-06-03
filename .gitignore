@@ -31,6 +31,7 @@ jspm_packages/
 .yarn-integrity
 .cache
 *.js
+*.d.ts
 cdk.out/
 !/.projenrc.js
 /test-reports/
