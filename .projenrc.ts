@@ -22,7 +22,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   },
   eslintOptions: {
     dirs: ['src'],
-    // prettier: true,
+    prettier: true,
   },
   license: 'MIT',
   keywords: ['aws', 'cdk', 'aws-cdk', 'cloudwatch', 'elb'],
