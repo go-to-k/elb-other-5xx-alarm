@@ -6,6 +6,8 @@ AWS CDK construct library for a CloudWatch Alarm for Elastic Load Balancing that
 
 Metrics for concrete status codes such as 500 are provided (e.g. HTTPCode_ELB_500_Count). Therefore, it is useful to distinguish detection from them.
 
+For more information, please see the following blog page. [here](https://dev.to/aws-builders/cloudwatch-composite-alarm-to-detect-elbs-other-5xx-with-aws-cdk-45pn).
+
 ### CloudWatch Composite Alarm
 
 The "ELB Other 5XX Alarm" by this construct uses the [CloudWatch Composite Alarm](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Create_Composite_Alarm.html).
@@ -44,6 +46,7 @@ new ELBOther5XXAlarm(this, 'ELBOther5XXAlarm', {
   evaluationPeriods: 1,
 });
 ```
+
 # API Reference <a name="API Reference" id="api-reference"></a>
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
