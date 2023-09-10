@@ -1,5 +1,6 @@
 {
   "name": "elb-other-5xx-alarm",
+  "description": "CloudWatch Alarm for HTTPCode_ELB_5XX_Count excluding 500, 502, 503, and 504 (e.g. 501, 505, 561)",
   "repository": {
     "type": "git",
     "url": "https://github.com/go-to-k/elb-other-5xx-alarm.git"
@@ -26,7 +27,10 @@
     "unbump": "npx projen unbump",
     "upgrade": "npx projen upgrade",
     "watch": "npx projen watch",
-    "projen": "npx projen"
+    "projen": "npx projen",
+    "cdk": "cdk",
+    "integ:deploy": "cdk deploy --app='./lib/integ.js'",
+    "integ:destroy": "cdk destroy --app='./lib/integ.js'"
   },
   "author": {
     "name": "go-to-k",
@@ -75,46 +79,6 @@
   "main": "lib/index.js",
   "license": "MIT",
   "version": "0.0.0",
-  "jest": {
-    "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.ts?(x)",
-      "<rootDir>/(test|src)/**/*(*.)@(spec|test).ts?(x)"
-    ],
-    "clearMocks": true,
-    "collectCoverage": true,
-    "coverageReporters": [
-      "json",
-      "lcov",
-      "clover",
-      "cobertura",
-      "text"
-    ],
-    "coverageDirectory": "coverage",
-    "coveragePathIgnorePatterns": [
-      "/node_modules/"
-    ],
-    "testPathIgnorePatterns": [
-      "/node_modules/"
-    ],
-    "watchPathIgnorePatterns": [
-      "/node_modules/"
-    ],
-    "reporters": [
-      "default",
-      [
-        "jest-junit",
-        {
-          "outputDirectory": "test-reports"
-        }
-      ]
-    ],
-    "preset": "ts-jest",
-    "globals": {
-      "ts-jest": {
-        "tsconfig": "tsconfig.dev.json"
-      }
-    }
-  },
   "types": "lib/index.d.ts",
   "stability": "stable",
   "jsii": {
