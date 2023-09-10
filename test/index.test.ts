@@ -29,6 +29,10 @@ const getTemplate = (): Template => {
 describe('Fine-grained Assertions Tests', () => {
   const template = getTemplate();
 
+  test('Snapshot test', () => {
+    expect(template.toJSON()).toMatchSnapshot();
+  });
+
   test('Alarm created', () => {
     template.resourceCountIs('AWS::CloudWatch::Alarm', 5);
   });
