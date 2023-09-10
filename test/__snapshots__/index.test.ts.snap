@@ -1,0 +1,230 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Fine-grained Assertions Tests Snapshot test 1`] = `
+{
+  "Parameters": {
+    "BootstrapVersion": {
+      "Default": "/cdk-bootstrap/hnb659fds/version",
+      "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]",
+      "Type": "AWS::SSM::Parameter::Value<String>",
+    },
+  },
+  "Resources": {
+    "ELBOther5XXAlarmD34F55ED": {
+      "Properties": {
+        "ActionsEnabled": true,
+        "ActionsSuppressor": {
+          "Fn::GetAtt": [
+            "ELBOther5XXAlarmELBConcreteStatusSuppressorAlarm74C416F3",
+            "Arn",
+          ],
+        },
+        "ActionsSuppressorExtensionPeriod": 60,
+        "ActionsSuppressorWaitPeriod": 60,
+        "AlarmActions": [
+          {
+            "Ref": "TopicBFC7AF6E",
+          },
+        ],
+        "AlarmName": "test-alarm",
+        "AlarmRule": {
+          "Fn::Join": [
+            "",
+            [
+              "(ALARM("",
+              {
+                "Fn::GetAtt": [
+                  "ELBOther5XXAlarmHTTPCodeELB5XXCountAlarmC0D9FEA7",
+                  "Arn",
+                ],
+              },
+              "") AND (NOT (ALARM("",
+              {
+                "Fn::GetAtt": [
+                  "ELBOther5XXAlarmELBConcreteStatusSuppressorAlarm74C416F3",
+                  "Arn",
+                ],
+              },
+              ""))))",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::CloudWatch::CompositeAlarm",
+    },
+    "ELBOther5XXAlarmELBConcreteStatusSuppressorAlarm74C416F3": {
+      "Properties": {
+        "ActionsEnabled": false,
+        "AlarmName": "TestStackELBOther5XXAlarmELBConcreteStatusSuppressorAlarm875CB7FD",
+        "AlarmRule": {
+          "Fn::Join": [
+            "",
+            [
+              "(ALARM("",
+              {
+                "Fn::GetAtt": [
+                  "ELBOther5XXAlarmHTTPCodeELB500CountAlarmE024342E",
+                  "Arn",
+                ],
+              },
+              "") OR ALARM("",
+              {
+                "Fn::GetAtt": [
+                  "ELBOther5XXAlarmHTTPCodeELB502CountAlarmFEB9F989",
+                  "Arn",
+                ],
+              },
+              "") OR ALARM("",
+              {
+                "Fn::GetAtt": [
+                  "ELBOther5XXAlarmHTTPCodeELB503CountAlarm9245609E",
+                  "Arn",
+                ],
+              },
+              "") OR ALARM("",
+              {
+                "Fn::GetAtt": [
+                  "ELBOther5XXAlarmHTTPCodeELB504CountAlarm3CB4C2A2",
+                  "Arn",
+                ],
+              },
+              ""))",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::CloudWatch::CompositeAlarm",
+    },
+    "ELBOther5XXAlarmHTTPCodeELB500CountAlarmE024342E": {
+      "Properties": {
+        "ActionsEnabled": false,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "Dimensions": [
+          {
+            "Name": "LoadBalancer",
+            "Value": "default",
+          },
+        ],
+        "EvaluationPeriods": 1,
+        "MetricName": "HTTPCode_ELB_500_Count",
+        "Namespace": "AWS/ApplicationELB",
+        "Period": 60,
+        "Statistic": "Sum",
+        "Threshold": 1,
+        "TreatMissingData": "notBreaching",
+      },
+      "Type": "AWS::CloudWatch::Alarm",
+    },
+    "ELBOther5XXAlarmHTTPCodeELB502CountAlarmFEB9F989": {
+      "Properties": {
+        "ActionsEnabled": false,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "Dimensions": [
+          {
+            "Name": "LoadBalancer",
+            "Value": "default",
+          },
+        ],
+        "EvaluationPeriods": 1,
+        "MetricName": "HTTPCode_ELB_502_Count",
+        "Namespace": "AWS/ApplicationELB",
+        "Period": 60,
+        "Statistic": "Sum",
+        "Threshold": 1,
+        "TreatMissingData": "notBreaching",
+      },
+      "Type": "AWS::CloudWatch::Alarm",
+    },
+    "ELBOther5XXAlarmHTTPCodeELB503CountAlarm9245609E": {
+      "Properties": {
+        "ActionsEnabled": false,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "Dimensions": [
+          {
+            "Name": "LoadBalancer",
+            "Value": "default",
+          },
+        ],
+        "EvaluationPeriods": 1,
+        "MetricName": "HTTPCode_ELB_503_Count",
+        "Namespace": "AWS/ApplicationELB",
+        "Period": 60,
+        "Statistic": "Sum",
+        "Threshold": 1,
+        "TreatMissingData": "notBreaching",
+      },
+      "Type": "AWS::CloudWatch::Alarm",
+    },
+    "ELBOther5XXAlarmHTTPCodeELB504CountAlarm3CB4C2A2": {
+      "Properties": {
+        "ActionsEnabled": false,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "Dimensions": [
+          {
+            "Name": "LoadBalancer",
+            "Value": "default",
+          },
+        ],
+        "EvaluationPeriods": 1,
+        "MetricName": "HTTPCode_ELB_504_Count",
+        "Namespace": "AWS/ApplicationELB",
+        "Period": 60,
+        "Statistic": "Sum",
+        "Threshold": 1,
+        "TreatMissingData": "notBreaching",
+      },
+      "Type": "AWS::CloudWatch::Alarm",
+    },
+    "ELBOther5XXAlarmHTTPCodeELB5XXCountAlarmC0D9FEA7": {
+      "Properties": {
+        "ActionsEnabled": false,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "Dimensions": [
+          {
+            "Name": "LoadBalancer",
+            "Value": "default",
+          },
+        ],
+        "EvaluationPeriods": 1,
+        "MetricName": "HTTPCode_ELB_5XX_Count",
+        "Namespace": "AWS/ApplicationELB",
+        "Period": 60,
+        "Statistic": "Sum",
+        "Threshold": 1,
+        "TreatMissingData": "notBreaching",
+      },
+      "Type": "AWS::CloudWatch::Alarm",
+    },
+    "TopicBFC7AF6E": {
+      "Type": "AWS::SNS::Topic",
+    },
+  },
+  "Rules": {
+    "CheckBootstrapVersion": {
+      "Assertions": [
+        {
+          "Assert": {
+            "Fn::Not": [
+              {
+                "Fn::Contains": [
+                  [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                  ],
+                  {
+                    "Ref": "BootstrapVersion",
+                  },
+                ],
+              },
+            ],
+          },
+          "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI.",
+        },
+      ],
+    },
+  },
+}
+`;
