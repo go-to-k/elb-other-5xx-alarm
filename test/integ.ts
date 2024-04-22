@@ -3,7 +3,7 @@ import { SnsAction } from 'aws-cdk-lib/aws-cloudwatch-actions';
 import { SecurityGroup, SubnetType, Vpc } from 'aws-cdk-lib/aws-ec2';
 import { ApplicationLoadBalancer, ListenerAction } from 'aws-cdk-lib/aws-elasticloadbalancingv2';
 import { Topic } from 'aws-cdk-lib/aws-sns';
-import { ELBOther5XXAlarm } from '.';
+import { ELBOther5XXAlarm } from '../src';
 
 const app = new App();
 const stack = new Stack(app, 'ELBOther5XXAlarmStack');
