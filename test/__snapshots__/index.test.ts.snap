@@ -10,7 +10,7 @@ exports[`Fine-grained Assertions Tests Snapshot test 1`] = `
     },
   },
   "Resources": {
-    "ELBOther5XXAlarmD34F55ED": {
+    "ELBOther5XXAlarm97BD7EA5": {
       "Properties": {
         "ActionsEnabled": true,
         "ActionsSuppressor": {
